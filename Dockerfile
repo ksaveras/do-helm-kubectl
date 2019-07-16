@@ -1,9 +1,15 @@
 FROM alpine:3.9
 
+ARG BUILD_DATE
+ARG VCS_REF
+
 # Metadata
-LABEL org.label-schema.name="do-helm-kubectl" \
+LABEL org.label-schema.build-date=$BUILD_DATE \
+      org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.name="do-helm-kubectl" \
       org.label-schema.url="https://hub.docker.com/r/ksaveras/do-helm-kubectl" \
-      org.label-schema.vcs-url="https://github.com/ksaveras/do-helm-kubectl"
+      org.label-schema.vcs-url="https://github.com/ksaveras/do-helm-kubectl" \
+      org.label-schema.schema-version="1.0.0-rc1"
 
 # Note: Latest version of kubectl may be found at:
 # https://aur.archlinux.org/packages/kubectl-bin/
